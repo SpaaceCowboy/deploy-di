@@ -18,11 +18,12 @@ export default function Login() {
               <Navbar />
               </div>
           </div>
-        </div>
+        </div>s
         <div className="pt-10">
             <h1>Welcome to your dashboard {user.displayName}</h1>
             <button onClick={() => auth.signOut()}>Sign Out</button>
         </div>
     </div>
+    
   )
 }
