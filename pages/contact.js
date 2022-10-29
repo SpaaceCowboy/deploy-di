@@ -7,7 +7,7 @@ import { Navbar } from './components'
 
 export default function Home() {
   return (
-    <div className='bg-[#1D1f57] h-screen relative  text-center md:text-left 
+    <div className='bg-[#1D1f57]  relative  text-center md:text-left 
     md:flex-row max-w-7l px-10 justify-evenly mx-auto items-center '>
   
       <div className="sm:px-16 px-6 flex justify-center items-center"> 
@@ -18,30 +18,17 @@ export default function Home() {
 
       <div className='flex flex-col space-y-10 mt-20'>
         <h4 className='text-4xl font-semibold text-center text-white'>
-            I have just what you need {""}
+            Contact Us
         </h4>
+        <h2 className='text-2xl font-medium text-center text-white'>
+          Fill in the details below to contact us and we will  do our best to <br></br>  respond as quickly as possible.
+        </h2>
+      
 
-        <div className='space-y-10'>
-            <div className='flex items-center space-x-5 justify-center '>
-                <PhoneIcon className='text-[#F7AB0A] h-7 w-7 animate-pulse' />
-                <p className='text-2xl text-white'>+905103688930</p>
-            </div>
 
-            <div className='flex items-center space-x-5 justify-center'>
-                <MapPinIcon className='text-[#F7AB0A] h-7 w-7 animate-pulse' />
-                <p className='text-2xl text-white'> Istanbul </p>
-            </div>
-
-            
-            <div className='flex items-center space-x-5 justify-center'>
-                <EnvelopeIcon className='text-[#F7AB0A] h-7 w-7 animate-pulse' />
-                <p className='text-2xl text-white'> shayan.shoeibzadeh@outlook.com </p>
-            </div>
-        </div>
-
-        <form className='flex flex-col space-y-2 w-fit mx-auto '>
-            <div className='flex space-x-2 '>
-                <input placeholder='Name' className='contactInput' type="text" />
+        <form className='flex flex-col space-y-2 w-[80%] lg:w-[40%] mx-auto '>
+            <div className='flex flex-col space-y-2 '>
+                <input placeholder='Full Name' className='contactInput' type="text" />
                 <input placeholder='Email' className='contactInput' type="text" />
             </div>
 

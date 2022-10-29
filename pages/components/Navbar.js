@@ -25,15 +25,15 @@ export default function Navbar() {
         hover:text-black">
               Home
             </a>
-            <a href='#features' className="tracking-widest p-5 hover:border rounded-full hover:border-black/40 
+            <a href='/#features' className="tracking-widest p-5 hover:border rounded-full hover:border-black/40 
         hover:text-black">
               Features
             </a>
-            <a href='#product' className="tracking-widest p-5 hover:border rounded-full hover:border-black/40 
+            <a href='/#product' className="tracking-widest p-5 hover:border rounded-full hover:border-black/40 
         hover:text-black">
               Product
             </a>
-            <a href='#client' className="tracking-widest p-5 hover:border rounded-full hover:border-black/40 
+            <a href='/#client' className="tracking-widest p-5 hover:border rounded-full hover:border-black/40 
         hover:text-black">
               Client
             </a>
@@ -48,7 +48,7 @@ export default function Navbar() {
                 <a href='../auth/login' 
                 className="py-2 px-4 text-lg bg-teal-500 text-white rounded-lg
                 font-medium ml-8">
-              Login
+              Sign In
             </a>   
               </div>
             )}   
@@ -57,6 +57,9 @@ export default function Navbar() {
                 <a href="../dashboard"
                 className='py-2 px-4 text-lg bg-teal-500 text-white rounded-lg 
                 font-medium ml-8'>Dashboard</a>
+                <a onClick={() => auth.signOut()} href="../dashboard"
+                className='py-2 px-4 text-lg bg-teal-500 text-white rounded-lg 
+                font-medium ml-8'>Sign Out</a>
               </div>
             )}     
 
@@ -80,7 +83,7 @@ export default function Navbar() {
             className={`font-poppins font-normal cursor-pointer
             text-[16px] ${index === navLinks.length - 1 ? 'mr-0' : 'mb-4'}
             text-white`}>
-              <a className='hover:text-black' href={`#${nav.id}`} >
+              <a className='hover:text-black' href={`/#${nav.id}`} >
                 {nav.title}
               </a>
             </li>
