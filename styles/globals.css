@@ -98,7 +98,7 @@
 }
 
 .feature-card:hover {
-  background: rgb(100 116 139);
+  background: rgb(100 116 139);;
   box-shadow: var(--card-shadow);
 }
 

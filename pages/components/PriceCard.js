@@ -17,7 +17,7 @@ export default function PriceCard() {
           x: 0,
           opacity: 1,
         }}
-        className='bg-white flex flex-col justify-center items-center
+        className=' flex flex-col justify-center items-center
         space-y-10 py-10 rounded-[20px]  bg-slate-400/10'>
           <h2 
           className='font-poppins text-2xl text-white'>
@@ -49,7 +49,7 @@ export default function PriceCard() {
           x:0,
           opacity:1
         }}
-        className='bg-white flex flex-col justify-center items-center 
+        className=' flex flex-col justify-center items-center 
         space-y-10 py-10 rounded-[20px]  bg-slate-400/10'>
           <h2 
           className='font-poppins text-2xl text-white'>
