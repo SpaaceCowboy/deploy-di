@@ -11,6 +11,7 @@ import Hero from "./Hero"
 import Navbar from "./Navbar"
 import Stats from "./Stats"
 import Testimonials from "./Testimonials"
+import PriceCard from "./PriceCard"
 
 
 export {
@@ -27,4 +28,5 @@ export {
     Navbar,
     Stats,
     Testimonials,
+    PriceCard,
 }

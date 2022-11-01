@@ -12,7 +12,6 @@ export default function Home() {
           <Navbar />
         </div>
       </div>
-
       <div className='bg-[#1D1f57] flex justify-center items-start'>
         <div className='xl:max-w-[1280px] w-full '>
           <Hero />
@@ -26,10 +25,12 @@ export default function Home() {
           <Billing />
           <CardDeal />
           <Testimonials />
-          <Clients />
           <CTA />
-          <Footer />
+            
         </div>
+      </div>
+      <div className='sm:px-16 px-6 bg-slate-400/5'>
+        <Footer />
       </div>
     </div>
   )

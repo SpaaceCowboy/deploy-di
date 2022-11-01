@@ -34,13 +34,16 @@ export default function Business() {
     transition={{duration: 3.5}}
     className='flex-1 flex-col flex justify-center items-start'> 
       <h2 className='font-poppins font-semibold xs:text-[48px] text-[40px] text-white xs:leading-[76.8px] leading-[66.8px] w-full' >
-        You do the business,<br className='sm:block hidden' /> we'll handle the money.
+        You press a button,<br className='sm:block hidden' /> we'll do the trading.
       </h2>
       <p 
       className='font-poppins font-normal text-white text-[18px] leading-[30.8px] 
       max-w-[470px] mt-5 '>
-        With the right credit card, you can improve your financial life by building 
-        credit, earning rewards and saving money. But with hundreds of credit cards on the market.
+        For every market condition, there’s a trading strategy that can 
+        profit from it. 3Commas bots happen to be really good at reducing
+         average acquisition costs, directly increasing your profit margins
+          from each trade.
+
       </p>
       <Button />
     </motion.div>
@@ -56,7 +59,8 @@ export default function Business() {
             x: 0,
             opacity: 1,
         }}
-    className='flex-1 flex justify-center items-start flex-col  md:ml-10 ml-0 md:mt-0 mt-10 relative'>
+    className='flex-1 flex justify-center items-start flex-col 
+     md:ml-10 ml-0 md:mt-0 mt-10 relative'>
       {features.map((feature, index) => (
         <FeatureCard key={feature.id} {...feature} index={index} />
       ))}

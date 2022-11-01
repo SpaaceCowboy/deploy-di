@@ -1,12 +1,12 @@
-import * as  React from 'react'
+import * as React from 'react';
 import PropTypes from 'prop-types';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
-import { Navbar } from './components';
-import {PricingTable, PricingSlot, PricingDetail} from 'react-pricing-table';
- 
+import {Navbar, Footer, PriceCard} from './components'
+import { useState } from 'react';
+
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -48,43 +48,87 @@ export default function BasicTabs() {
     setValue(newValue);
   };
 
+
+    const [domLoaded, setDomLoaded] = useState(false)
+
+    React.useEffect(() => {
+      setDomLoaded(true)
+
+    }, [])
+  
+
   return (
-    <div className='bg-[#1D1f57] h-screen'>
-        <div className='bg-[#1D1f57] w-full overflow-hidden'>
-          <div className='sm:px-16 px-6 flex justify-center items-center '>
-            <div className='xl:max-w-[1280px] w-full'>
-              <Navbar />
-              </div>
-          </div>
+    <>
+    {domLoaded && (
+    <div className='bg-[#1D1f57]'>
+      <div className="bg-[#1D1f57] sm:px-16 px-6 flex justify-center items-center"> 
+        <div className='xl:max-w-[1280px] w-full'>
+          <Navbar />
         </div>
-    <Box sx={{ width: '100%' }}>
-      <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
-        <Tabs className="" centered value={value} onChange={handleChange}  aria-label="basic tabs example">
-          <Tab label="Monthly" {...a11yProps(0)} />
-          <Tab label="Annualy" {...a11yProps(1)} />
-          <Tab label="Other" {...a11yProps(2)} />
+      </div>
+      
+    <div className='flex justify-center flex-col items-center bg-[#1D1f57] sm:px-16 px-6 mt-[6%]'>
+    <h3 className='text-white font-poppins text-[18px] '>
+      All of our plans are commission-free with no hidden charges!</h3>
+    <Box className='w-[90%] mt-[3%]'>
+      <Box className='border-b-2 border-slate-500'>
+        <Tabs
+         centered indicatorColor="none" 
+        value={value} onChange={handleChange} aria-label="basic tabs example">
+          <Tab sx={{color: 'white', paddingLeft: '10%', paddingRight: 
+          '10%' }}
+           label="Monthly" {...a11yProps(0)} />
+          <Tab sx={{color: 'white', paddingLeft: '10%', paddingRight: '10%'}}
+           label="Annually" {...a11yProps(1)} />
+          <Tab sx={{color: 'white', paddingLeft: '10%', paddingRight: '10%'}}
+           label="Other" {...a11yProps(2)} />
         </Tabs>
       </Box>
+     
       <TabPanel value={value} index={0}>
-           <PricingTable  highlightColor='#1976D2'>
-    <PricingSlot  buttonText='TRY IT FREE' title='FREE' priceText='$0/month'>
-        <PricingDetail> <h4 className='text-2xl'><b>15</b> projects</h4></PricingDetail>
-        <PricingDetail> <h4><b>15</b> projects</h4></PricingDetail>
-        <PricingDetail> <h4><b>15</b> projects</h4></PricingDetail>
-        <PricingDetail ><h4><b>15</b> projects</h4></PricingDetail>
-    </PricingSlot>
-
-
-</PricingTable>
+        <PriceCard />
       </TabPanel>
       <TabPanel value={value} index={1}>
-        Item Two
+        <PriceCard />
       </TabPanel>
       <TabPanel value={value} index={2}>
-        Item Three
+        <div className='bg-[#1D1f57]  text-center md:text-left 
+        md:flex-row max-w-7l ss:px-10 justify-evenly mx-auto items-center '>
+          <div className='flex flex-col space-y-10 mt-10 bg-[#1D1f57] h-screen'>
+            <h4 className='text-4xl font-semibold text-center text-white'>
+                Contact Us
+            </h4>
+            <h2 className='ss:text-2xl font-medium text-center text-white'>
+              Fill in the details below to contact us and we will  do our best to <br></br>  respond as quickly as possible.
+            </h2>
+          
+            <form className='flex flex-col space-y-2 w-[100%] lg:w-[60%]  mx-auto bg-[#1D1f57]'>
+                <div className='flex flex-col space-y-2 '>
+                    <input placeholder='Full Name' className='contactInput' type="text" />
+                    <input placeholder='Email' className='contactInput' type="text" />
+                </div>
+
+                <input placeholder='Subject' className='contactInput' type="text" />
+
+                <textarea placeholder='Message' className='contactInput ' />
+                <button 
+                type='submit'
+                className='bg-[#F7AB0A] py-5 px-10 rounded-mb text-black font-bold'>
+                    Submit
+                </button>
+            </form>
+          </div>
+        </div>
       </TabPanel>
     </Box>
-
     </div>
+    <div className='sm:px-16 px-6 bg-slate-400/5 mt-20'>
+     <Footer /> 
+    </div>
+    
+    </div>
+    )}
+    </>
+    
   );
 }

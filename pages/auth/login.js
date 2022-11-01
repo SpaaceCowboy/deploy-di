@@ -51,7 +51,9 @@ export default function Login() {
           </div>
         </div>
 
-        <div className=" bg-slate-400/10 flex flex-col justify-center items-center ml-[24%] w-[50%] pt-10 shadow-xl mt-32 p-10 text-gray-700 rounded-lg ">
+        <div className=" bg-slate-400/10 flex flex-col justify-center 
+        items-center ss:ml-[24%] ss:w-[50%] pt-10 shadow-xl mt-32 p-10
+         text-gray-700 rounded-lg ">
             <h2 className='text-3xl font-semibold text-white '>Join Today</h2>
             <div className='py-4'>
                 <h3 className='text-center py-4 text-2xl text-white'>Sign in with one of the providers</h3>

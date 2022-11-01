@@ -29,9 +29,11 @@ export default function Footer() {
                 {footerLinks.links.map((Link, index ) => (
                   <li key={Link.name} 
                   className={`font-poppins font-normal text-[16px] leading-[24px] text-white 
-                  hover:text-secondary cursor-pointer ${index !== footerLinks.links.length -1 ? 
+                  hover:text-secondary  cursor-pointer ${index !== footerLinks.links.length -1 ? 
                   'mb-4' : 'mb-9'}`} >
-                    {Link.name}
+                    <a 
+                   className='hover:text-teal-500'
+                   href="">{Link.name}</a>
                   </li>
                 ))}
               </ul>
@@ -46,16 +48,27 @@ export default function Footer() {
           2022 Di-bot. All rights Reserved.
         </p>
 
-        <div className='flex flex-row md:mt-0 mt-6'>
-            {socialMedia.map((social, index) => (
-              <img 
-              key={social.id}
-              src={social.icon }
-              className={`w-[21px] h-[21px] object-contain cursor-pointer ${
-                index !== socialMedia.length -1 ? 'mr-6' : 'mr-0'
-              } `}
-              alt="" />
-            ))}
+        <div className='flex flex-row md:mt-0 mt-6 space-x-5'>
+            <a href="">
+              <img
+              className={`w-[23px] h-[21px] object-contain cursor-pointer `}
+              src="/assets/instagram.svg" alt="" />
+            </a>
+            <a href="">
+              <img
+              className={`w-[23px] h-[21px] object-contain cursor-pointer `}
+              src="/assets/facebook.svg" alt="" />
+            </a>
+            <a href="">
+              <img
+              className={`w-[23px] h-[21px] object-contain cursor-pointer `}
+              src="/assets/twitter.svg" alt="" />
+            </a>
+            <a href="">
+              <img
+              className={`w-[23px] h-[21px] object-contain cursor-pointer `}
+              src="/assets/linkedin.svg" alt="" />
+            </a>
         </div>
       </div>
     </section>

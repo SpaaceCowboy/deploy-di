@@ -38,9 +38,9 @@ export default function Hero() {
         </h1>
         <p className='font-poppins font-normal text-white text-[18px] leading-[30.8px] max-w-[470px]
         mt-5'>
-          Our team of experts uses a methodology to identify the credit cards most likely 
-          to fit your needs.
-          We examine annual percentage rates, annual fees.
+        3Commas helps users grow their crypto investments using a 
+        feature-rich terminal and proven automated bots that operate on 18+ 
+          major exchanges
         </p>
       </div>
       <div className='flex-1 flex justify-center items-center md:my-0 my-10 relative'>

@@ -16,29 +16,31 @@ export default function Navbar() {
       <ul 
       className='list-none sm:flex hidden justify-end 
       items-center'>
-
           <li
           className={`font-poppins font-normal cursor-pointer
           text-[16px]
            text-white`}>
             <a href='/' className="tracking-widest p-5 hover:border rounded-full hover:border-black/40 
-        hover:text-black">
+        hover:text-teal-500">
               Home
             </a>
-            <a href='/#features' className="tracking-widest p-5 hover:border rounded-full hover:border-black/40 
-        hover:text-black">
-              Features
+            {!user && (
+            <a
+             href='../auth/login' className="tracking-widest p-5 hover:border rounded-full hover:border-black/40 
+        hover:text-teal-500">
+              Pricing
             </a>
-            <a href='/#product' className="tracking-widest p-5 hover:border rounded-full hover:border-black/40 
-        hover:text-black">
-              Product
+            )}
+            {user && (
+            <a
+             href='/Pricing' className="tracking-widest p-5 hover:border rounded-full hover:border-black/40 
+        hover:text-teal-500">
+              Pricing
             </a>
-            <a href='/#client' className="tracking-widest p-5 hover:border rounded-full hover:border-black/40 
-        hover:text-black">
-              Client
-            </a>
+            )}
+
             <a href='../contact' className="tracking-widest p-5 hover:border rounded-full hover:border-black/40 
-        hover:text-black">
+        hover:text-teal-500">
               Contact
             </a>       
           </li>
@@ -46,7 +48,7 @@ export default function Navbar() {
             {!user && ( 
               <div >            
                 <a href='../auth/login' 
-                className="py-2 px-4 text-lg bg-teal-500 text-white rounded-lg
+                className="py-2 px-4 text-lg hover:bg-teal-500 bg-slate-500/30 text-white rounded-lg
                 font-medium ml-8">
               Sign In
             </a>   
@@ -55,13 +57,17 @@ export default function Navbar() {
             {user && (
               <div>
                 <a href="../dashboard"
-                className='py-2 px-4 text-lg bg-teal-500 text-white rounded-lg 
+                className='py-2 px-4 text-lg hover:bg-teal-500 bg-slate-500/30 text-white rounded-lg 
                 font-medium ml-8'>Dashboard</a>
-                <a onClick={() => auth.signOut()} href="../dashboard"
-                className='py-2 px-4 text-lg bg-teal-500 text-white rounded-lg 
+                <a onClick={() => auth.signOut()} href="/"
+                className='py-2 px-4 text-lg  hover:bg-teal-500 bg-slate-500/30 text-white rounded-lg 
                 font-medium ml-8'>Sign Out</a>
               </div>
-            )}     
+            )} 
+
+
+
+
 
       <div 
       className='sm:hidden flex flex-1 justify-end items-center'>
@@ -83,7 +89,7 @@ export default function Navbar() {
             className={`font-poppins font-normal cursor-pointer
             text-[16px] ${index === navLinks.length - 1 ? 'mr-0' : 'mb-4'}
             text-white`}>
-              <a className='hover:text-black' href={`/#${nav.id}`} >
+              <a className='hover:text-black' href={`${nav.id}`} >
                 {nav.title}
               </a>
             </li>
