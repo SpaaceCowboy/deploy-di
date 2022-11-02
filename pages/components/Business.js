@@ -34,7 +34,7 @@ export default function Business() {
     transition={{duration: 3.5}}
     className='flex-1 flex-col flex justify-center items-start'> 
       <h2 className='font-poppins font-semibold xs:text-[48px] text-[40px] text-white xs:leading-[76.8px] leading-[66.8px] w-full' >
-        You press a button,<br className='sm:block hidden' /> we'll do the trading.
+        You press a button,<br className='sm:block hidden' /> we&apos;ll do the trading.
       </h2>
       <p 
       className='font-poppins font-normal text-white text-[18px] leading-[30.8px] 

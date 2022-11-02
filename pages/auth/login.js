@@ -34,13 +34,7 @@ export default function Login() {
         }
     }
 
-    useEffect(() => {
-        if(user) {
-            route.push('../dashboard')
-        } else{
-            console.log('login')
-        }
-    }, [user])
+
   return (
       <div className='bg-[#1D1f57] h-screen'>
         <div className='bg-[#1D1f57] w-full overflow-hidden'>

@@ -14,7 +14,6 @@ export default function Navbar() {
   return (
     <nav 
     className='w-full flex py-6 justify-center items-center navbar'>
-
       <ul 
       className='list-none sm:flex hidden justify-end 
       items-center'>
@@ -22,10 +21,12 @@ export default function Navbar() {
           className={`font-poppins font-normal cursor-pointer
           text-[16px]
            text-white`}>
-            <a href='/' className="tracking-widest p-5 hover:border rounded-full hover:border-black/40 
+            <Link href='/'>
+              <a className="tracking-widest p-5 hover:border rounded-full hover:border-black/40 
         hover:text-teal-500">
               Home
-            </a>
+              </a>
+            </Link>
             {!user && (
             <a
              href='../auth/login' className="tracking-widest p-5 hover:border rounded-full hover:border-black/40 
@@ -34,11 +35,13 @@ export default function Navbar() {
             </a>
             )}
             {user && (
+            <Link href='/Pricing'>
             <a
-             href='/Pricing' className="tracking-widest p-5 hover:border rounded-full hover:border-black/40 
+         className="tracking-widest p-5 hover:border rounded-full hover:border-black/40 
         hover:text-teal-500">
               Pricing
             </a>
+            </Link>
             )}
 
             <a href='../contact' className="tracking-widest p-5 hover:border rounded-full hover:border-black/40 
@@ -61,9 +64,14 @@ export default function Navbar() {
                 <a href="../dashboard"
                 className='py-2 px-4 text-lg hover:bg-teal-500 bg-slate-500/30 text-white rounded-lg 
                 font-medium ml-8'>Dashboard</a>
-                <a onClick={() => auth.signOut()} href="/"
+                <Link onClick={() => auth.signOut()} href="/"
+                >
+                  <a 
                 className='py-2 px-4 text-lg  hover:bg-teal-500 bg-slate-500/30 text-white rounded-lg 
-                font-medium ml-8'>Sign Out</a>
+                font-medium ml-8'>
+                  Sign Out
+                  </a></Link>
+                  
               </div>
             )} 
 

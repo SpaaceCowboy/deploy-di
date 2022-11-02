@@ -25,7 +25,7 @@ export default function FeedBack({content, name, title, img}) {
       <div className='flex flex-row '>
         
         <div className='w-[48px] h-[48px] relative'>
-          <Image alt src={img} layout="fill" />
+          <Image alt='' src={img} layout="fill" />
         </div>
         
         <div className='flex flex-col ml-4'>
