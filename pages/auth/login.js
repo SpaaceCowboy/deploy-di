@@ -5,7 +5,7 @@ import { useAuthState } from 'react-firebase-hooks/auth'
 import { FcGoogle } from 'react-icons/fc'
 import { GoogleAuthProvider, signInWithPopup, FacebookAuthProvider, updateProfile } from 'firebase/auth'
 import { auth } from '../../utils/firebase'
-import { Navbar } from '../components'
+import { Navbar } from '../../components'
  
 
 export default function Login() {
