@@ -10,7 +10,7 @@ export default function Clients() {
           <div key={clients.id} className="flex-1 flex justify-center items-center 
           sm:min-w-[1 92px] min-w-[120px] ">
             
-            <Image src={clients.logo} width="100px" className="object-contain" />
+            <Image alt="" src={clients.logo} width="100px" className="object-contain" />
           </div>
         ))}
       </div>

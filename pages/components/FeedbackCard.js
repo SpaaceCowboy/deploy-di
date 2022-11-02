@@ -18,14 +18,14 @@ export default function FeedBack({content, name, title, img}) {
     className='flex justify-between flex-col px-10 py-12 rounded-[12px] 
     max-w-[370px] md:mr-10 sm:mr-5 mr-0 my-5 feedback-card'>
 
-      <Image src="/assets/quotes.svg" width="420pxl" height="27px" className='object-contain'  />
+      <Image alt='' src="/assets/quotes.svg" width="420pxl" height="27px" className='object-contain'  />
       <p className='font-poppins font-normal text-[18px] leading-[32px] text-white
       my-10'>{content}</p>
 
       <div className='flex flex-row '>
         
         <div className='w-[48px] h-[48px] relative'>
-          <Image src={img} layout="fill" />
+          <Image alt src={img} layout="fill" />
         </div>
         
         <div className='flex flex-col ml-4'>

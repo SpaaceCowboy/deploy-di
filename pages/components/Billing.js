@@ -10,7 +10,7 @@ export default function Billing() {
       className='flex-1 flex justify-center items-center md:ml-10 ml-0
        md:mt-0 mt-10 relative'>
         
-        <Image src="/assets/bill.png" width={1000} height={1000}  />
+        <Image alt='' src="/assets/bill.png" width={1000} height={1000}  />
 
         <div className='absolute z-[3] -left-1/2 top-0 w-[50%] h-[50%] rounded-full 
         white__gradient' />

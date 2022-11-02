@@ -21,7 +21,7 @@ export default function GetStarted() {
             <span className='text-gradient'>Get</span>
           </p>
           <div className='relative w-[23px] h-[23px] object-contain'>
-            <Image src={"/assets/arrow-up.svg"} layout="fill" />
+            <Image alt='' src={"/assets/arrow-up.svg"} layout="fill" />
           </div>
         </div>
           <p className='font-poppins font-medium text-[18px] leading-[23px]'>
@@ -39,7 +39,7 @@ export default function GetStarted() {
             <span className='text-gradient'>Get</span>
           </p>
           <div className='w-[23px] h-[23px] object-contain relative'>
-            <Image src={"/assets/arrow-up.svg"} layout="fill" />
+            <Image alt='' src={"/assets/arrow-up.svg"} layout="fill" />
           </div>
 
         </div>

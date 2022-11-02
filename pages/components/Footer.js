@@ -51,22 +51,22 @@ export default function Footer() {
         <div className='flex flex-row md:mt-0 mt-6 space-x-5'>
             <a href="">
               <div className='relative w-[23px] h-[21px] object-contain cursor pointer'>
-                <Image src="/assets/instagram.svg" layout='fill'  />
+                <Image alt='' src="/assets/instagram.svg" layout='fill'  />
               </div>
             </a>
             <a href="">
               <div className='relative w-[23px] h-[21px] object-contain cursor pointer'>
-                <Image src="/assets/twitter.svg" layout='fill'  />
+                <Image alt='' src="/assets/twitter.svg" layout='fill'  />
               </div>
             </a>
             <a href="">
               <div className='relative w-[23px] h-[21px] object-contain cursor pointer'>
-                <Image src="/assets/linkedin.svg" layout='fill'  />
+                <Image alt='' src="/assets/linkedin.svg" layout='fill'  />
               </div>
             </a>
             <a href="">
               <div className='relative w-[23px] h-[21px] object-contain cursor pointer'>
-                <Image src="/assets/facebook.svg" layout='fill'  />
+                <Image alt='' src="/assets/facebook.svg" layout='fill'  />
               </div>
             </a>
         </div>

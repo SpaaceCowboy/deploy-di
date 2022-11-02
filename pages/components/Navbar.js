@@ -74,7 +74,7 @@ export default function Navbar() {
       <div 
       className='sm:hidden flex flex-1 justify-end items-center'>
         <div className="w-[28px] h-[28px] object-contain relative">
-        <Image layout='fill'
+        <Image  layout='fill'
         src={toggle ? "/assets/close.svg" : "/assets/menu.svg"} alt="" 
          onClick={() => setToggle((prev) => 
         !prev)} />
