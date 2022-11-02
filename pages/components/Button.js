@@ -1,6 +1,7 @@
 import React from 'react'
 import { useAuthState } from 'react-firebase-hooks/auth'
 import { auth } from '../../utils/firebase'
+import Link from 'next/link'
 
 
 export default function Button() {
@@ -12,14 +13,15 @@ export default function Button() {
     <button className=' py-4 px-6 bg-blue-gradient font-poppins font-medium 
     text-[18px] text-primary outline-none mt-7 rounded-[10px]'>
       {!user && (
-      <a href="/auth/login">
-        Get Started
-      </a>
+      <Link href={"/auth/login"}>
+      Get Started
+      </Link>
       )}
       {user && (
-      <a href="/Pricing">
+      <Link href="/Pricing">
         Get Started
-      </a>
+      </Link>
+      
       )}
     </button>
   )

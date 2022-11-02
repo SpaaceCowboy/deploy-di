@@ -1,6 +1,7 @@
 import React from 'react'
 import Button from './Button'
 import { motion } from "framer-motion"
+import Image from "next/image"
 
 export default function CardDeal() {
   return (
@@ -34,7 +35,8 @@ export default function CardDeal() {
             opacity: 1,
         }}
       className='flex-1 flex justify-center items-center md:ml-10 ml-0 md:mt-0 mt-10 relative'>
-         <img src="/assets/card.png" alt="" className='w-[100%] h-[100%]' />
+         
+         <Image src={"/assets/card.png"} width={1000} height={1000} />
       </motion.div>
 
     </section>

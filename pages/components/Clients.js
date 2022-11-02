@@ -1,4 +1,5 @@
 import { clients } from "../constants"
+import Image from "next/image"
 
 export default function Clients() {
   return (
@@ -8,8 +9,8 @@ export default function Clients() {
         {clients.map((clients) => (
           <div key={clients.id} className="flex-1 flex justify-center items-center 
           sm:min-w-[1 92px] min-w-[120px] ">
-            <img src="{clients.logo}" alt="" 
-            className="sm:w-[192px] w-[100px] object-contain "/>
+            
+            <Image src={clients.logo} width="100px" className="object-contain" />
           </div>
         ))}
       </div>

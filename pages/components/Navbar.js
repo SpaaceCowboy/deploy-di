@@ -2,6 +2,8 @@ import {useState} from 'react'
 import { useAuthState } from 'react-firebase-hooks/auth'
 import { auth } from '../../utils/firebase'
 import { navLinks } from "../constants"
+import Image from 'next/image'
+import Link from 'next/link'
 
 export default function Navbar() {
 
@@ -71,10 +73,12 @@ export default function Navbar() {
 
       <div 
       className='sm:hidden flex flex-1 justify-end items-center'>
-        <img 
+        <div className="w-[28px] h-[28px] object-contain relative">
+        <Image layout='fill'
         src={toggle ? "/assets/close.svg" : "/assets/menu.svg"} alt="" 
-        className="w-[28px] h-[28px] object-contain" onClick={() => setToggle((prev) => 
+         onClick={() => setToggle((prev) => 
         !prev)} />
+        </div>
 
         <div 
         className={`${toggle ? 'flex' : 'hidden'} p-6 bg-black-gradient absolute top-20

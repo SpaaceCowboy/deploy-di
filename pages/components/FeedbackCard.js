@@ -1,6 +1,6 @@
 import React from 'react'
 import { motion } from "framer-motion"
-
+import Image from 'next/image'
 
 export default function FeedBack({content, name, title, img}) {
   return (
@@ -17,13 +17,17 @@ export default function FeedBack({content, name, title, img}) {
         }}
     className='flex justify-between flex-col px-10 py-12 rounded-[12px] 
     max-w-[370px] md:mr-10 sm:mr-5 mr-0 my-5 feedback-card'>
-      <img src="/assets/quotes.svg" alt="" 
-      className='w-[420px] h-[27px] object-contain' />
+
+      <Image src="/assets/quotes.svg" width="420pxl" height="27px" className='object-contain'  />
       <p className='font-poppins font-normal text-[18px] leading-[32px] text-white
       my-10'>{content}</p>
 
       <div className='flex flex-row '>
-        <img src={img} alt=""  className="w-[48px] h-[48px] rounded-full" />
+        
+        <div className='w-[48px] h-[48px] relative'>
+          <Image src={img} layout="fill" />
+        </div>
+        
         <div className='flex flex-col ml-4'>
           <h4 className='font-poppins font-semibold text-[20px] leading-[32px] 
           text-white '>

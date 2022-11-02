@@ -1,5 +1,6 @@
 import React from 'react'
 import GetStarted from './GetStarted'
+import Image from 'next/image'
 
 
 export default function Hero() {
@@ -10,8 +11,9 @@ export default function Hero() {
         <div
         className="items-center py[6px] px-4 flex flex-row bg-discount-gradient
         rounded-[10px] mb-2">
-          <img src="/assets/Discount.svg" alt="" 
-          className='w-[32px] h-[32px]'/>
+          <div className='w-[32px] h-[32px] relative'>
+            <Image src={"/assets/Discount.svg"} layout='fill' />
+          </div>
           <p className='font-poppins font-normal text-white text-[18px] leading-[30.8px] ml-2'>
         <span 
         className='text-white'>20%
@@ -44,8 +46,10 @@ export default function Hero() {
         </p>
       </div>
       <div className='flex-1 flex justify-center items-center md:my-0 my-10 relative'>
-        <img src="/assets/robot.png" alt="" 
-        className='w-[100%] h-[100%] relative z-[5]'/>
+ 
+          <Image src={"/assets/robot.png"} width={1000} height={1000} />
+ 
+
         <div className='absolute z-[0] w-[40%] h-[35%] top-[0] pink__gradient'/>
         <div className='absolute z-[1] w-[80%] h-[80%] rounded-full buttom-40 white__gradient'/>
         <div className='absolute z-[0] w-[50%] h-[50%] right-20 buttom-20 blue__gradient '/>

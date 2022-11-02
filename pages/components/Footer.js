@@ -1,5 +1,7 @@
 import React from 'react'
 import { footerLinks, socialMedia } from '../constants'
+import Link from 'next/link'
+import Image from 'next/image'
 
 
 export default function Footer() {
@@ -8,8 +10,6 @@ export default function Footer() {
       <div className='flex justify-center items-center md:flex-row flex-col mb-8
       w-full'>
         <div className='flex-1 flex-col justify-start mr-10'>
-          <img src="" alt=""
-           className='w-[266px] h-[72px] object-contain ' />
            <p className="font-poppins font-normal text-white text-[18px] leading-[30.8px]
            mt-4 max-w-[310px]">
             A new way to make Trading easy, reliable and secure. 
@@ -31,7 +31,7 @@ export default function Footer() {
                   className={`font-poppins font-normal text-[16px] leading-[24px] text-white 
                   hover:text-secondary  cursor-pointer ${index !== footerLinks.links.length -1 ? 
                   'mb-4' : 'mb-9'}`} >
-                    <a 
+                    <a
                    className='hover:text-teal-500'
                    href="">{Link.name}</a>
                   </li>
@@ -50,24 +50,24 @@ export default function Footer() {
 
         <div className='flex flex-row md:mt-0 mt-6 space-x-5'>
             <a href="">
-              <img
-              className={`w-[23px] h-[21px] object-contain cursor-pointer `}
-              src="/assets/instagram.svg" alt="" />
+              <div className='relative w-[23px] h-[21px] object-contain cursor pointer'>
+                <Image src="/assets/instagram.svg" layout='fill'  />
+              </div>
             </a>
             <a href="">
-              <img
-              className={`w-[23px] h-[21px] object-contain cursor-pointer `}
-              src="/assets/facebook.svg" alt="" />
+              <div className='relative w-[23px] h-[21px] object-contain cursor pointer'>
+                <Image src="/assets/twitter.svg" layout='fill'  />
+              </div>
             </a>
             <a href="">
-              <img
-              className={`w-[23px] h-[21px] object-contain cursor-pointer `}
-              src="/assets/twitter.svg" alt="" />
+              <div className='relative w-[23px] h-[21px] object-contain cursor pointer'>
+                <Image src="/assets/linkedin.svg" layout='fill'  />
+              </div>
             </a>
             <a href="">
-              <img
-              className={`w-[23px] h-[21px] object-contain cursor-pointer `}
-              src="/assets/linkedin.svg" alt="" />
+              <div className='relative w-[23px] h-[21px] object-contain cursor pointer'>
+                <Image src="/assets/facebook.svg" layout='fill'  />
+              </div>
             </a>
         </div>
       </div>

@@ -1,15 +1,16 @@
 import React from 'react'
 import { motion } from "framer-motion"
+import Image from 'next/image'
 
 export default function Billing() {
   return (
     <section id='product' className='flex md:flex-row flex-col sm:flex-col-reverse 
     sm:py-16 py-6'>
       <motion.div 
-
       className='flex-1 flex justify-center items-center md:ml-10 ml-0
        md:mt-0 mt-10 relative'>
-        <img src="/assets/bill.png" alt="" className='w-[100%] h-[100%] relative z-[5]' />
+        
+        <Image src="/assets/bill.png" width={1000} height={1000}  />
 
         <div className='absolute z-[3] -left-1/2 top-0 w-[50%] h-[50%] rounded-full 
         white__gradient' />
