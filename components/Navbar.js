@@ -20,40 +20,40 @@ export default function Navbar() {
           <li
           className={`font-poppins font-normal cursor-pointer
           text-[16px]
-           text-white`}>
+           `}>
             <Link href='/'>
-              <a className="tracking-widest p-5 hover:border rounded-full hover:border-black/40 
-        hover:text-teal-500">
+              <a className="tracking-widest py-2 px-6   rounded-lg hover:text-teal-500 hover:bg-slate-500/30">
               Home
               </a>
             </Link>
             {!user && (
             <a
-             href='../auth/login' className="tracking-widest p-5 hover:border rounded-full hover:border-black/40 
-        hover:text-teal-500">
+             href='../auth/login' className="tracking-widest py-2 px-6   rounded-lg hover:text-teal-500 hover:bg-slate-500/30">
               Pricing
             </a>
             )}
             {user && (
             <Link href='/Pricing'>
             <a
-         className="tracking-widest p-5 hover:border rounded-full hover:border-black/40 
-        hover:text-teal-500">
+         className="tracking-widest py-2 px-6   rounded-lg hover:text-teal-500 hover:bg-slate-500/30">
               Pricing
             </a>
             </Link>
             )}
 
-            <a href='../contact' className="tracking-widest p-5 hover:border rounded-full hover:border-black/40 
-        hover:text-teal-500">
+            <a href='../contact' className="tracking-widest py-2 px-6   rounded-lg hover:text-teal-500 hover:bg-slate-500/30">
               Contact
-            </a>       
+            </a>     
+
+            <a href='../Blog' className="tracking-widest py-2 px-6   rounded-lg hover:text-teal-500 hover:bg-slate-500/30">
+              Blog
+            </a>    
           </li>
       </ul>
             {!user && ( 
               <div >            
                 <a href='../auth/login' 
-                className="py-2 px-4 text-lg hover:bg-teal-500 bg-slate-500/30 text-white rounded-lg
+                className="py-2 px-4 text-lg hover:bg-teal-500 bg-slate-500/30  rounded-lg
                 font-medium ml-8">
               Sign In
             </a>   
@@ -62,12 +62,12 @@ export default function Navbar() {
             {user && (
               <div>
                 <a href="../dashboard"
-                className='py-2 px-4 text-lg hover:bg-teal-500 bg-slate-500/30 text-white rounded-lg 
+                className='py-2 px-4 text-lg hover:bg-teal-500 bg-slate-500/30  rounded-lg 
                 font-medium ml-8'>Dashboard</a>
                 <Link onClick={() => auth.signOut()} href="/"
                 >
                   <a 
-                className='py-2 px-4 text-lg  hover:bg-teal-500 bg-slate-500/30 text-white rounded-lg 
+                className='py-2 px-4 text-lg  hover:bg-teal-500 bg-slate-500/30  rounded-lg 
                 font-medium ml-8'>
                   Sign Out
                   </a></Link>
@@ -76,7 +76,7 @@ export default function Navbar() {
             )} 
 
 
-
+          {/* sm size nav */}
 
 
       <div 

@@ -16,9 +16,9 @@ export default function Hero() {
           </div>
           <p className='font-poppins font-normal text-white text-[18px] leading-[30.8px] ml-2'>
         <span 
-        className='text-white'>20%
+        className=''>20%
         </span> Discount For {""}
-        <span className='text-white'> 1 Month
+        <span className=''> 1 Month
         </span>
           </p>
         </div>
@@ -26,7 +26,7 @@ export default function Hero() {
         <div 
         className='flex flex-row justify-between items-center w-full'>
           <h1 className='flex-1 font-poppins font-semibold ss:text-[72px] 
-          text-[52px] text-white ss:leading-[100px] leading-[75px]'>
+          text-[52px]  ss:leading-[100px] leading-[75px]'>
             The Next <br className='sm:block hidden'/>
             <span className='text-gradient'>Generation</span> {""}
           </h1>
@@ -35,10 +35,10 @@ export default function Hero() {
           </div>
         </div>
         <h1 className=' font-poppins font-semibold ss:text-[68px] text-[52px]
-        text-white ss:leading-[100px] leading-[75px] w-full'>
+         ss:leading-[100px] leading-[75px] w-full'>
           Trading Method
         </h1>
-        <p className='font-poppins font-normal text-white text-[18px] leading-[30.8px] max-w-[470px]
+        <p className='font-poppins font-normal  text-[18px] leading-[30.8px] max-w-[470px]
         mt-5'>
         3Commas helps users grow their crypto investments using a 
         feature-rich terminal and proven automated bots that operate on 18+ 
